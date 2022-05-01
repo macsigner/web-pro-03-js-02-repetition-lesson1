@@ -1,0 +1,52 @@
+<html>
+<head></head>
+<body>
+<script>
+    /* Aufgabe:
+     * Gib in der Konsole nur die Werte aus, die wahr (true) sind.
+
+     * Zusatzaufgabe (für schnellere):
+     * Wie kannst du nur die wahren Werte ausgeben ohne dich zu wiedehrolen?
+     */
+
+    var q1Var1 = "hello",
+        q1Var2 = 0,
+        q1Var3 = true,
+        q1Var4 = "false",
+        q1Var5 = -1,
+        q1Var6 = undefined,
+        q1Var7 = null,
+        q1Var8;
+
+    // 1.
+    console.log('1.')
+    console.log(q1Var3);
+
+    // 2.
+    console.log('2.')
+    let testForTrue = (val) => {
+        if (val === true) {
+            console.log(val);
+        }
+    }
+
+    testForTrue(q1Var1);
+    testForTrue(q1Var2);
+    testForTrue(q1Var3);
+    testForTrue(q1Var4);
+    testForTrue(q1Var5);
+    testForTrue(q1Var6);
+    testForTrue(q1Var7);
+    testForTrue(q1Var8);
+
+    // 3.
+    console.log('3.')
+    Object.keys(window).forEach((key) => {
+        if (key.substring(0, 5) === 'q1Var' && window[key] === true) {
+            console.log(key + ' is true');
+        }
+    });
+
+</script>
+</body>
+</html>
