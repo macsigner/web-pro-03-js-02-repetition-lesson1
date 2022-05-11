@@ -38,10 +38,16 @@
     console.log('b)');
     kunden.map(val => console.log((val.sex === 'f' ? 'Frau ' : 'Herr ') + val.firstname + ' ' + val.lastname));
 
-    // b)
+    // c)
     console.log('c)');
     console.log(kunden.reduce((previous, next) => {
         return previous + (next.sex === 'f' ? 'Frau ' : 'Herr ') + next.firstname + ' ' + next.lastname + '\n';
+    }, ''));
+
+    // d)
+    console.log('d)');
+    console.log(kunden.reduce((previous, next) => {
+        return `${previous}${next.sex === 'f' ? 'Frau ' : 'Herr '} ${next.firstname} ${next.lastname}\n`
     }, ''));
 
 </script>
