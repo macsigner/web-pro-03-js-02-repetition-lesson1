@@ -28,12 +28,19 @@
         {firstname: "Bart", lastname: "Bellon", phoneNumber: "0711234523", age: 27, sex: "m"},
     ];
 
-    // 1.
+    // a)
+    console.log('a)');
     for (let val of kunden) {
         console.log((val.sex === 'f' ? 'Frau ' : 'Herr ') + val.firstname + ' ' + val.lastname);
     }
 
-    // todo
+    // b)
+    console.log('b)');
+    kunden.map(val => console.log((val.sex === 'f' ? 'Frau ' : 'Herr ') + val.firstname + ' ' + val.lastname));
+
+    // b)
+    console.log('c)');
+    console.log(kunden.reduce((previous, next) => previous + (next.sex === 'f' ? 'Frau ' : 'Herr ') + next.firstname + ' ' + next.lastname + '\n', ''));
 
 </script>
 </body>
